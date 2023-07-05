@@ -1,6 +1,8 @@
 import 'package:fitness_login_pages_ui/components/my_button.dart';
 import 'package:fitness_login_pages_ui/components/png_image.dart';
 import 'package:fitness_login_pages_ui/constans/project_text.dart';
+import 'package:fitness_login_pages_ui/pages/login_page_login_screen.dart';
+import 'package:fitness_login_pages_ui/pages/login_page_signup_screen.dart';
 import 'package:fitness_login_pages_ui/styles/project_text_styles.dart';
 import 'package:fitness_login_pages_ui/utils/color_util.dart';
 import 'package:fitness_login_pages_ui/utils/image_items.dart';
@@ -42,6 +44,9 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           const SizedBox(height: 10),
           MyButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+            },
             text: ProjectText.loginText,
             backgroundColor: colorUtil.purpleColor,
             padding: paddingUtil.loginPadding,
@@ -49,6 +54,9 @@ class _SplashScreenState extends State<SplashScreen> {
           Padding(
             padding: paddingUtil.verticalButtonPadding,
             child: MyButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+              },
               text: ProjectText.signText,
               backgroundColor: colorUtil.orangeColor,
               padding: paddingUtil.signUpPadding,

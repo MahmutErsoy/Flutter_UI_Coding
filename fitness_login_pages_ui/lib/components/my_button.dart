@@ -7,15 +7,18 @@ class MyButton extends StatelessWidget {
     required this.backgroundColor,
     required this.text,
     required this.padding,
+    this.onPressed,
   });
   final Color backgroundColor;
   final String text;
   final EdgeInsets padding;
   final ProjectTextStyles textStyles = ProjectTextStyles();
+  final VoidCallback? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed ?? () {},
         style: ElevatedButton.styleFrom(
           padding: padding,
           shape: const StadiumBorder(),

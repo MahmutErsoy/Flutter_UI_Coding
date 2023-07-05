@@ -9,11 +9,18 @@ import 'package:fitness_login_pages_ui/utils/image_items.dart';
 import 'package:fitness_login_pages_ui/utils/padding_util.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final ProjectTextStyles textStyles = ProjectTextStyles();
+
   final ColorsUtilty colorUtil = ColorsUtilty();
+
   final ProjectPadding paddingUtil = ProjectPadding();
 
   @override

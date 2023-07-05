@@ -19,8 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
           inputDecorationTheme: const InputDecorationTheme(fillColor: Colors.white, filled: true),
           appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.white60, elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark)),
-      home: SignUpScreen(),
+              backgroundColor: Colors.white60,
+              iconTheme: IconThemeData(color: Colors.black),
+              elevation: 0,
+              systemOverlayStyle: SystemUiOverlayStyle.dark)),
+      home: SplashScreen(),
     );
   }
 }
