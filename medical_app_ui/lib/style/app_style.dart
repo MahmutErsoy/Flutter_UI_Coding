@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppStyle {
   // App Images
@@ -21,9 +20,9 @@ class AppStyle {
   static const inputFillColor = Color(0xffEEF6FC);
 
   // App Theme Data
-  static ThemeData? theme = ThemeData(
-      textTheme: GoogleFonts.nunitoSansTextTheme().apply(
-    bodyColor: const Color(0xff0E1012),
-    displayColor: const Color(0xff0E1012),
-  ));
+  //static ThemeData? theme = ThemeData(
+  //textTheme: GoogleFonts.nunitoSansTextTheme().apply(
+  //bodyColor: const Color(0xff0E1012),
+  //displayColor: const Color(0xff0E1012),
+  //));
 }
