@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
-
 class AppStyle {
   // App Images
+  // ignore: non_constant_identifier_names
   static String Audi_A4L = "assets/images/Audi_A4L.png";
+  // ignore: non_constant_identifier_names
   static String Audi_Q7 = "assets/images/Audi_Q7.png";
+  // ignore: non_constant_identifier_names
   static String Audi_RS7 = "assets/images/Audi_RS7.png";
 
   // Bottom Bar Icons

@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           Column(
-            children: const [Options(), SearchMedical(), BestBrands(), BestCars()],
+            children: const [Options(), SearchCars(), BestBrands(), BestCars()],
           )
         ],
       ),
@@ -124,14 +124,16 @@ class BestBrands extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: servicesList
                 .sublist(0, 3)
-                .map((e) => TextButton(
-                    onPressed: () {},
-                    child: Container(
-                      width: 90,
-                      height: 90,
-                      decoration: BoxDecoration(color: e.color, borderRadius: BorderRadius.circular(20)),
-                      child: Center(child: SvgPicture.asset(e.image)),
-                    )))
+                .map(
+                  (e) => TextButton(
+                      onPressed: () {},
+                      child: Container(
+                        width: 90,
+                        height: 90,
+                        decoration: BoxDecoration(color: e.color, borderRadius: BorderRadius.circular(20)),
+                        child: Center(child: SvgPicture.asset(e.image)),
+                      )),
+                )
                 .toList(),
           ),
           Row(
@@ -182,8 +184,8 @@ class Options extends StatelessWidget {
   }
 }
 
-class SearchMedical extends StatelessWidget {
-  const SearchMedical({
+class SearchCars extends StatelessWidget {
+  const SearchCars({
     super.key,
   });
 
