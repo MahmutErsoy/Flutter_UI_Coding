@@ -21,7 +21,7 @@ class _CheckListState extends State<CheckList> {
             radius: 15,
             color: isChecked ? Colors.lightBlueAccent : Colors.grey,
             padding: const EdgeInsets.all(10),
-            height: 50,
+            height: 55,
             width: double.infinity,
             border: true,
             child: Row(

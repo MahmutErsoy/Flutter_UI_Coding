@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_detail_ui/Screens/home_screen.dart';
 import 'package:project_detail_ui/product/app_strings.dart';
 import 'package:project_detail_ui/widgets/container_widget.dart';
 
@@ -16,6 +17,14 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomePage()));
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios_new_outlined,
+              color: Colors.black,
+            )),
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,

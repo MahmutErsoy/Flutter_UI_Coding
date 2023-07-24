@@ -118,7 +118,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const SizedBox(height: 20),
             ListView.builder(
               itemCount: weekWeatherList.length,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return SizedBox(
@@ -126,7 +126,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(weekWeatherList[index].day, style: TextStyle(color: Colors.grey, fontSize: 25)),
+                      Text(weekWeatherList[index].day, style: const TextStyle(color: Colors.grey, fontSize: 25)),
                       Row(
                         children: [
                           SizedBox(
@@ -135,17 +135,17 @@ class _DetailScreenState extends State<DetailScreen> {
                                 weekWeatherList[index].image,
                               )),
                           const SizedBox(width: 10),
-                          Text(weekWeatherList[index].name, style: TextStyle(color: Colors.grey, fontSize: 25))
+                          Text(weekWeatherList[index].name, style: const TextStyle(color: Colors.grey, fontSize: 25))
                         ],
                       ),
                       RichText(
                           text: TextSpan(
                               text: weekWeatherList[index].tem1,
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 27),
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 27),
                               children: <TextSpan>[
                             TextSpan(
                                 text: weekWeatherList[index].tem2,
-                                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 25))
+                                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 25))
                           ]))
                     ],
                   ),

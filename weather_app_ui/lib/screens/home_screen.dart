@@ -113,14 +113,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Text("Today", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold)),
                   GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailScreen()));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailScreen()));
                       },
                       child: const Text("7 days >", style: TextStyle(color: Colors.grey, fontSize: 20)))
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: SizedBox(
                 height: 120,
                 child: ListView.builder(
@@ -151,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(todayWeather[index].temperature,
-                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
                           SizedBox(
                             height: 45,
                             child: Image.asset(todayWeather[index].image),

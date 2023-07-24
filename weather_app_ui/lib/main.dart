@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:weather_app_ui/screens/home_screen.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xff191a1e),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

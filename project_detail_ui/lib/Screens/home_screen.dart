@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: const BottomAppBar(
         shape: CircularNotchedRectangle(),
+        height: 50,
         notchMargin: 6,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -215,9 +216,9 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(AppStrings().inProgress,
-                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.grey, fontSize: 17)),
+                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.black, fontSize: 17)),
                                 Text("88%",
-                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.grey, fontSize: 17))
+                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.black, fontSize: 17))
                               ],
                             )
                           ],
@@ -227,7 +228,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
@@ -242,11 +243,11 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               CheckList("Sketching logo and coloring"),
-              const SizedBox(height: 5),
+              const SizedBox(height: 15),
               CheckList("Landing page design"),
-              const SizedBox(height: 5),
+              const SizedBox(height: 15),
               CheckList("UI Kit design"),
             ],
           ),
