@@ -43,27 +43,51 @@ class DetailScreen extends StatelessWidget {
               ),
               Text(
                 "Berry Juice",
-                style: GoogleFonts.playfairDisplay(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),
+                style: GoogleFonts.playfairDisplay(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Text(
                 "Blend of berry with ice that\n makes your tired day feels very\n fresh again",
-                style: GoogleFonts.nunito(color: Colors.white70, fontSize: 20, fontWeight: FontWeight.bold),
+                style: GoogleFonts.nunito(
+                  color: Colors.white70,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
                 textAlign: TextAlign.center,
               ),
               Text(
                 "\$ 3.5",
-                style: GoogleFonts.playfairDisplay(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold),
+                style: GoogleFonts.playfairDisplay(
+                  color: Colors.white,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 40,
+                ),
                 height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white, width: 3), borderRadius: BorderRadius.circular(5)),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 3,
+                  ),
+                  borderRadius: BorderRadius.circular(5),
+                ),
                 alignment: Alignment.center,
                 child: Text(
                   "Get Your Extra",
-                  style: GoogleFonts.nunito(color: Colors.white70, fontSize: 20, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.nunito(
+                    color: Colors.white70,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ),

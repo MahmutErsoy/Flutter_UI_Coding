@@ -30,7 +30,10 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(5),
               child: Icon(Icons.file_copy_outlined),
             ),
-            Opacity(opacity: 0, child: Icon(Icons.no_cell)),
+            Opacity(
+              opacity: 0,
+              child: Icon(Icons.no_cell),
+            ),
             Padding(
               padding: EdgeInsets.all(5),
               child: Icon(Icons.calendar_today_outlined),
@@ -49,13 +52,25 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
+        leading: const CircleAvatar(
+          backgroundImage: AssetImage("assets/images1.jpeg"),
+        ),
         title: ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(AppStrings().userName,
-              style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.bold, fontSize: 25)),
-          subtitle: Text(AppStrings().position, style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  )),
+          subtitle: Text(
+            AppStrings().position,
+            style: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 15,
+            ),
+          ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
         actions: [
           Container(
@@ -84,19 +99,27 @@ class _HomePageState extends State<HomePage> {
                   height: 50,
                   width: double.infinity,
                   border: false,
-                  child: Text(AppStrings().search,
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w400))),
+                  child: Text(
+                    AppStrings().search,
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w400),
+                  )),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     AppStrings().project,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
                   ),
                   Text(
                     AppStrings().seeAll,
-                    style: const TextStyle(color: Colors.grey, fontSize: 20),
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20,
+                    ),
                   )
                 ],
               ),
@@ -108,9 +131,27 @@ class _HomePageState extends State<HomePage> {
                     AppStrings().inProgress,
                     style: const TextStyle(fontSize: 20, color: Colors.grey),
                   ),
-                  Text(AppStrings().todo, style: const TextStyle(fontSize: 20, color: Colors.grey)),
-                  Text(AppStrings().done, style: const TextStyle(fontSize: 20, color: Colors.grey)),
-                  Text(AppStrings().upcoming, style: const TextStyle(fontSize: 20, color: Colors.grey))
+                  Text(
+                    AppStrings().todo,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Text(
+                    AppStrings().done,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Text(
+                    AppStrings().upcoming,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    ),
+                  )
                 ],
               ),
               const SizedBox(height: 20),
@@ -149,13 +190,21 @@ class _HomePageState extends State<HomePage> {
                                 const Expanded(
                                   child: Stack(
                                     children: [
-                                      CircleAvatar(backgroundImage: AssetImage("assets/images1.jpeg")),
+                                      CircleAvatar(
+                                        backgroundImage: AssetImage("assets/images1.jpeg"),
+                                      ),
                                       Positioned(
-                                          left: 22,
-                                          child: CircleAvatar(backgroundImage: AssetImage("assets/images2.jpeg"))),
+                                        left: 22,
+                                        child: CircleAvatar(
+                                          backgroundImage: AssetImage("assets/images2.jpeg"),
+                                        ),
+                                      ),
                                       Positioned(
-                                          left: 45,
-                                          child: CircleAvatar(backgroundImage: AssetImage("assets/images3.jpeg"))),
+                                        left: 45,
+                                        child: CircleAvatar(
+                                          backgroundImage: AssetImage("assets/images3.jpeg"),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -215,10 +264,20 @@ class _HomePageState extends State<HomePage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(AppStrings().inProgress,
-                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.black, fontSize: 17)),
-                                Text("88%",
-                                    style: TextStyle(color: index.isEven ? Colors.white : Colors.black, fontSize: 17))
+                                Text(
+                                  AppStrings().inProgress,
+                                  style: TextStyle(
+                                    color: index.isEven ? Colors.white : Colors.black,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                Text(
+                                  "88%",
+                                  style: TextStyle(
+                                    color: index.isEven ? Colors.white : Colors.black,
+                                    fontSize: 17,
+                                  ),
+                                )
                               ],
                             )
                           ],
@@ -234,21 +293,31 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppStrings().myDailyTask,
-                        style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w400)),
+                    Text(
+                      AppStrings().myDailyTask,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                     Text(
                       AppStrings().edit,
-                      style: const TextStyle(fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w400),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w400,
+                      ),
                     )
                   ],
                 ),
               ),
               const SizedBox(height: 20),
-              CheckList("Sketching logo and coloring"),
+              CheckList(AppStrings().task1),
               const SizedBox(height: 15),
-              CheckList("Landing page design"),
+              CheckList(AppStrings().task2),
               const SizedBox(height: 15),
-              CheckList("UI Kit design"),
+              CheckList(AppStrings().task3),
             ],
           ),
         ),

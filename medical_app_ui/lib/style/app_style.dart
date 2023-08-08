@@ -18,11 +18,4 @@ class AppStyle {
   // App Colors
   static const primarySwatch = Color(0xff1C6BA4);
   static const inputFillColor = Color(0xffEEF6FC);
-
-  // App Theme Data
-  //static ThemeData? theme = ThemeData(
-  //textTheme: GoogleFonts.nunitoSansTextTheme().apply(
-  //bodyColor: const Color(0xff0E1012),
-  //displayColor: const Color(0xff0E1012),
-  //));
 }

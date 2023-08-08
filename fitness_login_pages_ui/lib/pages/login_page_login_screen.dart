@@ -10,7 +10,7 @@ import 'package:fitness_login_pages_ui/utils/padding_util.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -27,40 +27,47 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
-        body: Column(
-          children: [
-            Padding(
-              padding: paddingUtil.assetsPadding,
-              child: SizedBox(
-                height: 200,
-                child: PngImage(name: ImageItems().gymClub),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: paddingUtil.assetsPadding,
+                child: SizedBox(
+                  height: 200,
+                  child: PngImage(name: ImageItems().gymClub),
+                ),
               ),
-            ),
-            PageExplanation(firstText: ProjectText.makeText, secondText: ProjectText.yourselfText),
-            Padding(
-              padding: paddingUtil.textFieldPadding,
-              child: Column(
-                children: [
-                  CustomTextField(
-                      keyboardType: TextInputType.emailAddress,
-                      autofillHints: const [AutofillHints.email],
-                      labelText: ProjectText.enterEmailText,
-                      prefixIcon: Icons.email),
-                  CustomTextField(
-                      maxLength: 50,
-                      autofillHints: const [AutofillHints.password],
-                      labelText: ProjectText.enterPasswordText,
-                      prefixIcon: Icons.lock)
-                ],
+              PageExplanation(firstText: ProjectText.makeText, secondText: ProjectText.yourselfText),
+              Padding(
+                padding: paddingUtil.textFieldPadding,
+                child: Column(
+                  children: [
+                    CustomTextField(
+                        keyboardType: TextInputType.emailAddress,
+                        autofillHints: const [AutofillHints.email],
+                        labelText: ProjectText.enterEmailText,
+                        prefixIcon: Icons.email),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    CustomTextField(
+                        maxLength: 50,
+                        autofillHints: const [AutofillHints.password],
+                        labelText: ProjectText.enterPasswordText,
+                        prefixIcon: Icons.lock)
+                  ],
+                ),
               ),
-            ),
-            MyButton(
-                backgroundColor: colorUtil.purpleColor, text: ProjectText.loginText, padding: paddingUtil.loginPadding),
-            Padding(
-              padding: paddingUtil.textPadding,
-              child: Text(ProjectText.forgetText, style: textStyles.buttonStyle.copyWith(color: colorUtil.greyColor)),
-            )
-          ],
+              MyButton(
+                  backgroundColor: colorUtil.purpleColor,
+                  text: ProjectText.loginText,
+                  padding: paddingUtil.loginPadding),
+              Padding(
+                padding: paddingUtil.textPadding,
+                child: Text(ProjectText.forgetText, style: textStyles.buttonStyle.copyWith(color: colorUtil.greyColor)),
+              )
+            ],
+          ),
         ));
   }
 }

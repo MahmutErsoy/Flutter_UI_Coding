@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project_detail_ui/widgets/container_widget.dart';
 
-// ignore: must_be_immutable
 class CheckList extends StatefulWidget {
-  CheckList(this.title, {super.key});
-  String title;
+  const CheckList(this.title, {super.key});
+  final String title;
 
   @override
   State<CheckList> createState() => _CheckListState();

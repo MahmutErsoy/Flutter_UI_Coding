@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
           const SizedBox(height: 10),
           MyButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
             },
             text: ProjectText.loginText,
             backgroundColor: colorUtil.purpleColor,
@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
             padding: paddingUtil.verticalButtonPadding,
             child: MyButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
               },
               text: ProjectText.signText,
               backgroundColor: colorUtil.orangeColor,

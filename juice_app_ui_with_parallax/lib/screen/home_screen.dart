@@ -13,7 +13,11 @@ class HomeScreen extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [Color(0xff171926), Color(0xff192535), Color(0xff243c52)])),
+          gradient: LinearGradient(colors: [
+        Color(0xff171926),
+        Color(0xff192535),
+        Color(0xff243c52),
+      ])),
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -36,7 +40,10 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Positioned(
                         right: -100,
-                        child: SizedBox(height: 300, child: Image.asset("assets/drinks.png")),
+                        child: SizedBox(
+                          height: 300,
+                          child: Image.asset("assets/drinks.png"),
+                        ),
                       ),
                       Positioned(
                         left: 20,
@@ -45,7 +52,10 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Text(
                               "the\n Juice",
-                              style: GoogleFonts.rockSalt(fontSize: 40, color: const Color(0xffcbced6)),
+                              style: GoogleFonts.rockSalt(
+                                fontSize: 40,
+                                color: const Color(0xffcbced6),
+                              ),
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -60,8 +70,11 @@ class HomeScreen extends StatelessWidget {
                   height: 120,
                   child: Text(
                     "We Provide a Variety of fresh juices with various flavors.get fresh juice easily",
-                    style:
-                        GoogleFonts.ptSerif(color: const Color(0xff9598a6), fontSize: 22, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.ptSerif(
+                      color: const Color(0xff9598a6),
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -74,7 +87,10 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         "Variation :",
                         style: GoogleFonts.roboto(
-                            color: const Color(0xff9598a6), fontSize: 26, fontWeight: FontWeight.w600),
+                          color: const Color(0xff9598a6),
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                        ),
                       )
                     ],
                   ),

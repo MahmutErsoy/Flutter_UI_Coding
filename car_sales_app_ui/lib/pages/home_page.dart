@@ -18,9 +18,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: ListView(
-        children: [
+        children: const [
           Column(
-            children: const [Options(), SearchCars(), BestBrands(), BestCars()],
+            children: [Options(), SearchCars(), BestBrands(), BestCars()],
           )
         ],
       ),

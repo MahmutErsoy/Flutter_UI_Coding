@@ -51,7 +51,10 @@ class UpcomingAppointments extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: SizeConfig.blockSizeHorizontal! * 7),
           child: Text(
             "Upcoming Appointments",
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w700, letterSpacing: 1),
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1,
+                ),
           ),
         ),
         SizedBox(height: SizeConfig.blockSizeVertical! * 2),
@@ -64,7 +67,10 @@ class UpcomingAppointments extends StatelessWidget {
                     child: Container(
                       height: SizeConfig.blockSizeVertical! * 17,
                       width: SizeConfig.blockSizeHorizontal! * 80,
-                      decoration: BoxDecoration(color: e.color, borderRadius: BorderRadius.circular(30)),
+                      decoration: BoxDecoration(
+                        color: e.color,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
                       child: Row(
                         children: [
                           Container(
@@ -72,16 +78,22 @@ class UpcomingAppointments extends StatelessWidget {
                             width: 71,
                             height: 99,
                             decoration: const BoxDecoration(
-                                color: Colors.white12, borderRadius: BorderRadius.all(Radius.circular(26))),
+                              color: Colors.white12,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  26,
+                                ),
+                              ),
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   e.date,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .titleLarge!
-                                      .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                 )
                               ],
                             ),
@@ -92,22 +104,27 @@ class UpcomingAppointments extends StatelessWidget {
                             children: [
                               Text(
                                 e.time,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium!
-                                    .copyWith(letterSpacing: 1, color: Colors.white),
+                                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                                      letterSpacing: 1,
+                                      color: Colors.white,
+                                    ),
                               ),
                               Text(
                                 e.title,
                                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                                    color: Colors.white, fontWeight: FontWeight.bold, height: 1.8, letterSpacing: 1),
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      height: 1.8,
+                                      letterSpacing: 1,
+                                    ),
                               ),
                               Text(
                                 e.subTitle,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium!
-                                    .copyWith(letterSpacing: 1, height: 1.8, color: Colors.white60),
+                                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                                      letterSpacing: 1,
+                                      height: 1.8,
+                                      color: Colors.white60,
+                                    ),
                               ),
                             ],
                           )
@@ -202,7 +219,10 @@ class Services extends StatelessWidget {
       children: [
         Text(
           "Services",
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w700, letterSpacing: 1),
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1,
+              ),
         ),
         const SizedBox(height: 12),
         Row(
@@ -214,7 +234,10 @@ class Services extends StatelessWidget {
                       child: Container(
                         width: SizeConfig.blockSizeHorizontal! * 17,
                         height: SizeConfig.blockSizeHorizontal! * 17,
-                        decoration: BoxDecoration(color: e.color, borderRadius: BorderRadius.circular(20)),
+                        decoration: BoxDecoration(
+                          color: e.color,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                         child: Center(
                           child: SvgPicture.asset(e.image),
                         ),
@@ -239,14 +262,20 @@ class SearchMedical extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
             filled: true,
-            prefixIcon: TextButton(onPressed: () {}, child: SvgPicture.asset(AppStyle.searchIcon)),
+            prefixIcon: TextButton(
+              onPressed: () {},
+              child: SvgPicture.asset(AppStyle.searchIcon),
+            ),
             suffixIcon: TextButton(
               onPressed: () {},
               child: SvgPicture.asset(AppStyle.filtterIcon),
             ),
             hintText: "Search medical..",
             fillColor: AppStyle.inputFillColor,
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(18), borderSide: BorderSide.none)),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(18),
+              borderSide: BorderSide.none,
+            )),
       ),
     );
   }
@@ -273,7 +302,11 @@ class UserInfo extends StatelessWidget {
         width: 48.0,
         height: 48.0,
         decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(AppStyle.profile), fit: BoxFit.fill, repeat: ImageRepeat.repeat),
+            image: DecorationImage(
+              image: AssetImage(AppStyle.profile),
+              fit: BoxFit.fill,
+              repeat: ImageRepeat.repeat,
+            ),
             borderRadius: const BorderRadius.all(Radius.circular(18.0))),
         child: Stack(
           alignment: Alignment.topRight,
@@ -284,7 +317,11 @@ class UserInfo extends StatelessWidget {
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: AppStyle.primarySwatch,
-                  border: Border.all(color: Colors.white, width: 3.0, style: BorderStyle.solid)),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 3.0,
+                    style: BorderStyle.solid,
+                  )),
             )
           ],
         ),

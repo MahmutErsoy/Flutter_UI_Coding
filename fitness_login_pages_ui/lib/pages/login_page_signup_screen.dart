@@ -25,45 +25,65 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          Padding(
-            padding: paddingUtil.assetsPadding,
-            child: SizedBox(
-              height: 200,
-              child: PngImage(name: ImageItems().gymClub),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: paddingUtil.assetsPadding,
+              child: SizedBox(
+                height: 200,
+                child: PngImage(name: ImageItems().gymClub),
+              ),
             ),
-          ),
-          PageExplanation(firstText: ProjectText.shapeText, secondText: ProjectText.yourBodyText),
-          Padding(
-            padding: paddingUtil.textFieldPadding,
-            child: Column(
-              children: [
-                CustomTextField(
+            PageExplanation(
+              firstText: ProjectText.shapeText,
+              secondText: ProjectText.yourBodyText,
+            ),
+            Padding(
+              padding: paddingUtil.textFieldPadding,
+              child: Column(
+                children: [
+                  CustomTextField(
                     autofillHints: const [AutofillHints.newUsername],
                     labelText: ProjectText.nameText,
-                    prefixIcon: Icons.person),
-                CustomTextField(
+                    prefixIcon: Icons.person,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextField(
                     keyboardType: TextInputType.emailAddress,
                     autofillHints: const [AutofillHints.email],
                     labelText: ProjectText.enterEmailText,
-                    prefixIcon: Icons.email),
-                CustomTextField(
+                    prefixIcon: Icons.email,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextField(
                     keyboardType: TextInputType.visiblePassword,
                     autofillHints: const [AutofillHints.newPassword],
                     labelText: ProjectText.enterPasswordText,
-                    prefixIcon: Icons.lock)
-              ],
+                    prefixIcon: Icons.lock,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
             ),
-          ),
-          MyButton(
-            backgroundColor: colorUtil.orangeColor,
-            text: ProjectText.signText,
-            padding: paddingUtil.signUpPadding,
-          ),
-          const SizedBox(height: 8),
-          Text(ProjectText.haveAccountText, style: textStyles.questionStyle)
-        ],
+            MyButton(
+              backgroundColor: colorUtil.orangeColor,
+              text: ProjectText.signText,
+              padding: paddingUtil.signUpPadding,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              ProjectText.haveAccountText,
+              style: textStyles.questionStyle,
+            ),
+          ],
+        ),
       ),
     );
   }

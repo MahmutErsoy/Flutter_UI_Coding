@@ -32,7 +32,12 @@ class ContainerWidget extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
             color: color,
-            border: border ? Border.all(color: Theme.of(context).canvasColor, width: 2) : null,
+            border: border
+                ? Border.all(
+                    color: Theme.of(context).canvasColor,
+                    width: 2,
+                  )
+                : null,
             borderRadius: BorderRadius.circular(radius)),
         child: child);
   }

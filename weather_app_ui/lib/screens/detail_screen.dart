@@ -43,12 +43,15 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       height: 100,
                       width: 100,
-                      decoration: const BoxDecoration(shape: BoxShape.circle, boxShadow: [
-                        BoxShadow(
-                          color: Color(0xff45433d),
-                          blurRadius: 100,
-                        )
-                      ]),
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xff45433d),
+                            blurRadius: 100,
+                          )
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 180,
@@ -61,20 +64,35 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Column(
                     children: [
                       const Text("Tomorrow",
-                          style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.normal)),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.normal,
+                          )),
                       RichText(
                         text: const TextSpan(
                           text: '20',
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 80),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 80,
+                          ),
                           children: <TextSpan>[
                             TextSpan(
                                 text: '/17*',
-                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.grey)),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.grey,
+                                )),
                           ],
                         ),
                       ),
                       const Text("Rainy - Cloudy",
-                          style: TextStyle(color: Colors.grey, fontSize: 25, fontWeight: FontWeight.bold))
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                 )
@@ -84,7 +102,10 @@ class _DetailScreenState extends State<DetailScreen> {
               margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               height: 100,
               width: double.infinity,
-              decoration: BoxDecoration(color: const Color(0xff24252a), borderRadius: BorderRadius.circular(20)),
+              decoration: BoxDecoration(
+                color: const Color(0xff24252a),
+                borderRadius: BorderRadius.circular(20),
+              ),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -95,21 +116,64 @@ class _DetailScreenState extends State<DetailScreen> {
                         Icons.air,
                         color: Colors.grey,
                       ),
-                      Text("13 Km/h", style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
-                      Text("Wind", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold))
+                      Text(
+                        "13 Km/h",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        "Wind",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
                     ],
                   ),
-                  Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                    Icon(Icons.water_drop, color: Colors.blue),
-                    Text("24%", style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
-                    Text("Humidity", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold))
-                  ]),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.water_outlined, color: Colors.white),
-                      Text("87%", style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
-                      Text("Rain", style: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.bold))
+                      Icon(
+                        Icons.water_drop,
+                        color: Colors.blue,
+                      ),
+                      Text("24%",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Text("Humidity",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ))
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(
+                        Icons.water_outlined,
+                        color: Colors.white,
+                      ),
+                      Text("87%",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Text("Rain",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   )
                 ],
@@ -126,7 +190,11 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(weekWeatherList[index].day, style: const TextStyle(color: Colors.grey, fontSize: 25)),
+                      Text(weekWeatherList[index].day,
+                          style: const TextStyle(
+                            color: Colors.grey,
+                            fontSize: 25,
+                          )),
                       Row(
                         children: [
                           SizedBox(
@@ -135,17 +203,28 @@ class _DetailScreenState extends State<DetailScreen> {
                                 weekWeatherList[index].image,
                               )),
                           const SizedBox(width: 10),
-                          Text(weekWeatherList[index].name, style: const TextStyle(color: Colors.grey, fontSize: 25))
+                          Text(weekWeatherList[index].name,
+                              style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 25,
+                              ))
                         ],
                       ),
                       RichText(
                           text: TextSpan(
                               text: weekWeatherList[index].tem1,
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 27),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 27,
+                              ),
                               children: <TextSpan>[
                             TextSpan(
                                 text: weekWeatherList[index].tem2,
-                                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 25))
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey,
+                                  fontSize: 25,
+                                ))
                           ]))
                     ],
                   ),

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light()
           .copyWith(inputDecorationTheme: const InputDecorationTheme(fillColor: Colors.white, filled: true)),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

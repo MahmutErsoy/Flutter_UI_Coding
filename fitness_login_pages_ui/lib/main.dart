@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'pages/login_page_login_screen.dart';
-import 'pages/login_page_signup_screen.dart';
 import 'pages/login_page_splash_screen.dart';
 
 void main() {
@@ -23,7 +20,7 @@ class MyApp extends StatelessWidget {
               iconTheme: IconThemeData(color: Colors.black),
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.dark)),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

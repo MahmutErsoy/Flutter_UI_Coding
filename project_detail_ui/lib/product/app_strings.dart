@@ -22,4 +22,7 @@ class AppStrings {
   final String description = "Description";
   final String info =
       "Make your own design UI Dashboard for meeting now. Send your files not more than 200mb. I will check it soon. Read more";
+  final String task1 = "Sketching logo and coloring";
+  final String task2 = "Landing page design";
+  final String task3 = "UI Kit design";
 }

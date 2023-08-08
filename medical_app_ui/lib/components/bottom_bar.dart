@@ -38,7 +38,10 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
             activeIcon: SvgPicture.asset(
               AppStyle.homeIcon,
-              colorFilter: const ColorFilter.mode(AppStyle.primarySwatch, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                AppStyle.primarySwatch,
+                BlendMode.srcIn,
+              ),
             ),
             icon: SvgPicture.asset(AppStyle.homeIcon),
             label: "Home",
@@ -46,7 +49,10 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
             activeIcon: SvgPicture.asset(
               AppStyle.eventIcon,
-              colorFilter: const ColorFilter.mode(AppStyle.primarySwatch, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                AppStyle.primarySwatch,
+                BlendMode.srcIn,
+              ),
             ),
             icon: SvgPicture.asset(AppStyle.eventIcon),
             label: "Schedule",
@@ -54,7 +60,10 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
             activeIcon: SvgPicture.asset(
               AppStyle.reportIcon,
-              colorFilter: const ColorFilter.mode(AppStyle.primarySwatch, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                AppStyle.primarySwatch,
+                BlendMode.srcIn,
+              ),
             ),
             icon: SvgPicture.asset(AppStyle.reportIcon),
             label: "Report",
@@ -62,7 +71,10 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
               activeIcon: SvgPicture.asset(
                 AppStyle.notificationsIcon,
-                colorFilter: const ColorFilter.mode(AppStyle.primarySwatch, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  AppStyle.primarySwatch,
+                  BlendMode.srcIn,
+                ),
               ),
               icon: SvgPicture.asset(AppStyle.notificationsIcon),
               label: "Notifications"),

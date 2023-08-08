@@ -109,9 +109,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ]
                   ],
                 ),
-                CircleAvatar(backgroundColor: isLightMode ? Colors.black : Colors.white, radius: 2),
-                Text("275 review", style: TextStyle(color: isLightMode ? Colors.grey : Colors.white)),
-                Icon(Icons.favorite_border, color: isLightMode ? Colors.grey.shade600 : Colors.white)
+                CircleAvatar(backgroundColor: isLightMode ? Colors.black : Colors.white, radius: 4),
+                Text("275 review",
+                    style: TextStyle(
+                      color: isLightMode ? Colors.grey : Colors.white,
+                      fontSize: 23,
+                    )),
+                Icon(
+                  Icons.favorite_border,
+                  color: isLightMode ? Colors.grey.shade600 : Colors.white,
+                  size: 25,
+                )
               ],
             ),
             const Spacer(),
@@ -124,12 +132,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(color: isLightMode ? Colors.black : Colors.white, fontSize: 15),
                           children: const <TextSpan>[
                         TextSpan(text: "52", style: TextStyle(fontSize: 56)),
-                        TextSpan(text: ".99")
+                        TextSpan(text: ".99", style: TextStyle(fontSize: 25))
                       ])),
                 ),
                 Expanded(
                     child: Container(
-                  height: 60,
+                  height: 80,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
@@ -142,13 +150,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             blurRadius: 20)
                       ]),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(Icons.spa_outlined, color: isLightMode ? const Color(0xffe34172) : Colors.white),
-                      Text("12 Unid Tulip", style: TextStyle(color: isLightMode ? Colors.black : Colors.white)),
+                      Text("12 Unid Tulip",
+                          style: TextStyle(fontSize: 19, color: isLightMode ? Colors.black : Colors.white)),
                       Container(
-                        height: 20,
-                        width: 20,
+                        height: 25,
+                        width: 25,
                         decoration: BoxDecoration(
                             color: isLightMode ? Colors.transparent : Colors.white,
                             borderRadius: BorderRadius.circular(3),
